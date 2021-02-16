@@ -1,13 +1,10 @@
-import React from 'react';
-import CarouselMove from './Carousel';
-import Search from './Search';
+import React from 'react'
+
+import MoviesList from './MoviesList'
 
 function Home() {
     return <div>
-        <hr/>
-        <CarouselMove />
-        <hr/>
-        <Search />
+        <MoviesList />
         <div className='d-flex justify-content-around'>
             <div>Movie 1</div>
             <div>Movie 2</div>

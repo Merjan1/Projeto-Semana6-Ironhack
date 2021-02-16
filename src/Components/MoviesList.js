@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
 
+import CarouselMove from './Carousel'
+
 class MoviesList extends Component {
     state = {
         movies: [],
@@ -12,7 +14,7 @@ class MoviesList extends Component {
     setRandomIdx = (arr) => {
         let mySet = new Set()
 
-        while (mySet.size < 3) {
+        while (mySet.size < 5) {
             mySet.add(Math.floor(Math.random() * arr.length))
         }
 
@@ -21,7 +23,7 @@ class MoviesList extends Component {
 
     async componentDidMount() {
         try {
-            const response = await axios.get('https://api.themoviedb.org/3/movie/top_rated?api_key=b46a231393bf1d7236effd3142191445&language=en-US&page=2')
+            const response = await axios.get('https://api.themoviedb.org/3/movie/top_rated?api_key=b46a231393bf1d7236effd3142191445&language=en-US&page=1-3')
             this.setState({
                 movies: [...response.data.results],
             })
@@ -31,7 +33,9 @@ class MoviesList extends Component {
                 sortedMovies: [
                     this.state.movies[this.state.randomMovieIdx[0]],
                     this.state.movies[this.state.randomMovieIdx[1]],
-                    this.state.movies[this.state.randomMovieIdx[2]]
+                    this.state.movies[this.state.randomMovieIdx[2]],
+                    this.state.movies[this.state.randomMovieIdx[3]],
+                    this.state.movies[this.state.randomMovieIdx[4]]
                 ]
             })
 
@@ -63,7 +67,8 @@ class MoviesList extends Component {
                         </div>
                     </div>
                 </Link>
-            ))}
+            ))
+            }
         </div>
     }
 }

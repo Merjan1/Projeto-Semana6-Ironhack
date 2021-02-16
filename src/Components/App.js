@@ -1,18 +1,15 @@
 import './App.css';
 import { BrowserRouter, Route } from 'react-router-dom';
-import Navbar from './Navbar';
-import Home from './Home';
-import CarouselMove from './Carousel';
+
+import Home from './Home'
+import MovieDetail from './MovieDetail';
 import Search from './Search';
-
-
 
 function App() {
   return (
     <BrowserRouter>
-      <Navbar />
-      <hr />
-      <Home />
+      <Route exact path='/' component={Home} />
+      <Route exact path='/movies/:id' component={MovieDetail} />
     </BrowserRouter>
   );
 }

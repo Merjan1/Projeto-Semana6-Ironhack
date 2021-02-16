@@ -9,8 +9,9 @@ import Search from './Search'
 function Home() {
     return <div>
         <NavBar />
-        <hr />
-        <CarouselMove />
+        <div className='mt-2'>
+            <CarouselMove />
+        </div>
         <Search />
         <MoviesList />
     </div>

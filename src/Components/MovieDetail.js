@@ -1,5 +1,6 @@
 import axios from 'axios'
 import React from 'react'
+import CarouselMove from './Carousel'
 
 import NavBar from './NavBar'
 
@@ -39,14 +40,17 @@ class MovieDetail extends React.Component {
                     <div className='w-75 d-flex justify-content-around align-items-center'>
                         <h2 className='ml-7'>{this.state.title}</h2>
                     </div>
+                    <div className='w-75 d-flex justify-content-around align-items-center'>
+                        <h6><i className='ml-7'>{this.state.tagline}</i></h6>
+                    </div>
                     <div className='w-100 d-flex justify-content-center align-items-center mb-2'>
                         <p className="w-75 m-0"><strong>Original Title: </strong>{this.state.original_title}</p>
                     </div>
-                    {/* <div className='w-75 d-flex justify-content-around align-items-center'>
-                        <h3 className='d-flex flex-row-reverse mr-10'>{this.state.original_title}</h3>
-                    </div> */}
                     <div className='w-100 d-flex justify-content-center align-items-center mb-2'>
                         <p className="w-75 m-0"><strong>Release Date: </strong>{this.state.release_date}</p>
+                    </div>
+                    <div className='w-100 d-flex justify-content-center align-items-center mb-2'>
+                        <p className="w-75 m-0"><strong>Runtime: </strong>{this.state.runtime} min</p>
                     </div>
                     <div className='w-100 d-flex justify-content-center align-items-center mb-2'>
                         <p className="w-75 m-0"><strong>Rating: </strong>{this.state.vote_average}</p>

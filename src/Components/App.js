@@ -11,6 +11,7 @@ function App() {
   return (
     <BrowserRouter>
       <Navbar />
+      <hr />
       <Home />
     </BrowserRouter>
   );

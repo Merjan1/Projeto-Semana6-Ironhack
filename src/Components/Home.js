@@ -1,18 +1,18 @@
 import React from 'react'
 
 import MoviesList from './MoviesList'
-import Navbar from './Navbar'
+import NavBar from './NavBar'
+import CarouselMove from './Carousel'
+import Search from './Search'
+
 
 function Home() {
     return <div>
-        <Navbar />
+        <NavBar />
+        <hr />
+        <CarouselMove />
+        <Search />
         <MoviesList />
-        <div className='d-flex justify-content-around'>
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-
     </div>
 }
 

@@ -1,9 +1,9 @@
 import './App.css';
-import { BrowserRouter, Route } from 'react-router-dom'
-import "bootstrap/dist/css/bootstrap.min.css"
+import { BrowserRouter, Route } from 'react-router-dom';
 
 import Home from './Home'
 import MovieDetail from './MovieDetail';
+import Search from './Search';
 
 function App() {
   return (

@@ -1,7 +1,7 @@
 import axios from 'axios'
 import React from 'react'
 
-import Navbar from './Navbar'
+import NavBar from './NavBar'
 
 class MovieDetail extends React.Component {
     state = {
@@ -31,7 +31,7 @@ class MovieDetail extends React.Component {
     render() {
         return (
             <div>
-                <Navbar />
+                <NavBar />
                 <div className="d-flex flex-column justify-content-center align-items-center mt-4 mb-4">
                     <div className="w-25 d-flex flex-column justify-content-center align-items-center mb-3">
                         <img style={{ width: '250px', height: "auto" }} src={`http://image.tmdb.org/t/p/w185/${this.state.poster_path}`} alt={`${this.state.title}`} />

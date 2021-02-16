@@ -1,14 +1,16 @@
 import React from 'react'
 
 import MoviesList from './MoviesList'
+import Navbar from './Navbar'
 
 function Home() {
     return <div>
+        <Navbar />
         <MoviesList />
         <div className='d-flex justify-content-around'>
-            <div>Movie 1</div>
-            <div>Movie 2</div>
-            <div>Movie 3</div>
+            <div></div>
+            <div></div>
+            <div></div>
         </div>
 
     </div>

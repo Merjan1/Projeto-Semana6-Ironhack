@@ -12,7 +12,7 @@ class MoviesList extends Component {
     setRandomIdx = (arr) => {
         let mySet = new Set()
 
-        while (mySet.size < 3) {
+        while (mySet.size < 5) {
             mySet.add(Math.floor(Math.random() * arr.length))
         }
 
@@ -31,7 +31,9 @@ class MoviesList extends Component {
                 sortedMovies: [
                     this.state.movies[this.state.randomMovieIdx[0]],
                     this.state.movies[this.state.randomMovieIdx[1]],
-                    this.state.movies[this.state.randomMovieIdx[2]]
+                    this.state.movies[this.state.randomMovieIdx[2]],
+                    this.state.movies[this.state.randomMovieIdx[3]],
+                    this.state.movies[this.state.randomMovieIdx[4]]
                 ]
             })
 

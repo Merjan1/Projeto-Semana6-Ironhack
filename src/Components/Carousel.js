@@ -5,34 +5,34 @@ import axios from 'axios';
 
 
 class CarouselMove extends React.Component {
-
+  
   state = {
     poster_path: '',
     id: '',
     title: '',
   }
 
-  async componentDidMount() {
+  componentDidMount = async () => {
     try {
       const response = await axios.get(
-        `https://api.themoviedb.org/3/movie/${this.props.match.params.id}?api_key=b46a231393bf1d7236effd3142191445`
-      )
-      this.setState({
-        ...response.data
-      })
-    } catch(err) {
+      `https://api.themoviedb.org/3/collection/{collection_id}/images?api_key=b46a231393bf1d7236effd3142191445&language=en-US`
+    )
+      this.setState({ ...response.data});
+    } catch(err){
       console.error(err)
     }
   }
 
+
   render() {
+
     return (
         <div className='w-50 m-auto p-25'>
         <Carousel className='text-right'>
   <Carousel.Item>
     <img 
       className="img"
-      src={`http://image.tmdb.org/t/p/w185/${this.state.poster_path}`}
+      src={this.state.poster_path}
       alt={`${this.state.title}`}
     />
     <Carousel.Caption>
@@ -42,7 +42,8 @@ class CarouselMove extends React.Component {
   <Carousel.Item>
     <img
       className="img"
-      src={`http://image.tmdb.org/t/p/w185/${this.state.poster_path}`}
+      //src={`http://image.tmdb.org/t/p/w185/${this.state.poster_path}`}
+      src={this.state.poster_path}
       alt={`${this.state.title}`}
     />
 
@@ -53,7 +54,7 @@ class CarouselMove extends React.Component {
   <Carousel.Item>
     <img
       className="img"
-      src={`http://image.tmdb.org/t/p/w185/${this.state.poster_path}`}
+      src={this.state.poster_path}
       alt={`${this.state.title}`}
     />
 

@@ -2,7 +2,7 @@ import React from 'react';
 import { Button, Form, FormControl} from 'react-bootstrap';
 import './Search.css'
 
-function Search() {
+function Search(props) {
     return (
     <div className='d-flex justify-content-center m-auto'>
         <Form inline>

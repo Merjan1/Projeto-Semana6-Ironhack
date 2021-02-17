@@ -1,9 +1,7 @@
 import './App.css';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Navbar from './Navbar';
 import Home from './Home';
-import CarouselMove from './Carousel';
-import Search from './Search';
 
 
 
@@ -12,7 +10,9 @@ function App() {
     <BrowserRouter>
       <Navbar />
       <hr />
-      <Home />
+      <Switch>
+        <Route exact path='/' component={Home} />
+      </Switch>
     </BrowserRouter>
   );
 }

@@ -1,11 +1,12 @@
 import React from 'react';
-import { Navbar, Nav, Container } from 'react-bootstrap'
+import { Navbar, Nav, Container } from 'react-bootstrap';
+import './NavBar.css'
 
 function NavBar() {
 
-    return (<div>
+    return (<div id='navbar'>
         <div>
-            <Navbar bg="primary" variant="dark" className='justify-content-center'>
+            <Navbar className='justify-content-center'>
                 <Nav className="justify-content-center">
                     <Nav.Item>
                         <Nav.Link href="/">Home</Nav.Link>

@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
+import './MoviesList.css'
 
 import CarouselMove from './Carousel'
 
@@ -47,10 +48,10 @@ class MoviesList extends Component {
     }
 
     render() {
-        return <div className='list-group list-group-horizontal'>
+        return <div id='moviesList' className='list-group list-group-horizontal'>
             {this.state.sortedMovies.map((movie) => (
                 <Link style={{ textDecoration: 'none' }} to={`/movies/${movie.id}`} key={movie.id}>
-                    <div
+                    <div 
                         className="card-group d-flex list-group-item list-group-item-action"
                         style={{ maxHeight: '90vh' }}
                     >

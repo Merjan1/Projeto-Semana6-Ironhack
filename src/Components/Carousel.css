@@ -1,5 +1,9 @@
 .img {
-    width: 650px;
-    height: 700px;
+    width: 700px;
+    height: 450px;
     margin-right: 10px;
+}
+
+#carousel {
+    border: 2px solid black;
 }

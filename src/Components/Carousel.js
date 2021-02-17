@@ -47,7 +47,7 @@ class CarouselMove extends React.Component {
 
   render() {
     return (
-      <div className='w-50 m-auto p-25'>
+      <div id='carousel' className='w-50 m-auto p-25'>
         <Carousel className='text-right'>
           {this.state.moviesStort.map((movie) => (
             <Carousel.Item interval={3000}>

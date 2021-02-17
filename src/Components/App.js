@@ -7,10 +7,12 @@ import Search from './Search';
 
 function App() {
   return (
+    <div id='container'>
     <BrowserRouter>
       <Route exact path='/' component={Home} />
       <Route exact path='/movies/:id' component={MovieDetail} />
     </BrowserRouter>
+    </div>
   );
 }
 

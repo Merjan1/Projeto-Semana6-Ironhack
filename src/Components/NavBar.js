@@ -5,10 +5,11 @@ function NavBar() {
 
     return (<div>
         <div>
-
-            <Navbar bg="primary" variant="dark">
-                <Nav className="mr-auto">
-                    <Nav.Link href="/">Home</Nav.Link>
+            <Navbar bg="primary" variant="dark" className='justify-content-center'>
+                <Nav className="justify-content-center">
+                    <Nav.Item>
+                        <Nav.Link href="/">Home</Nav.Link>
+                    </Nav.Item>
                 </Nav>
             </Navbar>
         </div>

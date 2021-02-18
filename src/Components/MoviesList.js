@@ -51,7 +51,7 @@ class MoviesList extends Component {
         return <div id='moviesList' className='list-group list-group-horizontal'>
             {this.state.sortedMovies.map((movie) => (
                 <Link style={{ textDecoration: 'none' }} to={`/movies/${movie.id}`} key={movie.id}>
-                    <div 
+                    <div
                         className="card-group d-flex list-group-item list-group-item-action"
                         style={{ maxHeight: '90vh' }}
                     >
@@ -62,7 +62,7 @@ class MoviesList extends Component {
                                 alt={`${movie.title}`}
                             />
                         </div>
-                        <div className="beerDetails d-flex flex-column justify-content-center m-2">
+                        <div className="d-flex flex-column justify-content-center m-2">
                             <h2><strong>{movie.title}</strong></h2>
                             <p><strong>Rating: </strong>{movie.vote_average}</p>
                         </div>

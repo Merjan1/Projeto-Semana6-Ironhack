@@ -1,9 +1,9 @@
-import React, { Component } from 'react'
-import axios from 'axios'
-import { Link } from 'react-router-dom'
-import './MoviesList.css'
-import { Card, CardGroup } from 'react-bootstrap'
-import CarouselMove from './Carousel'
+import React, { Component } from 'react';
+import axios from 'axios';
+import { Link } from 'react-router-dom';
+import './MoviesList.css';
+import { Card, CardGroup } from 'react-bootstrap';
+import CarouselMove from './Carousel';
 
 class MoviesList extends Component {
     state = {

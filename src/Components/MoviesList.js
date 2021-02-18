@@ -1,9 +1,9 @@
-import React, { Component } from 'react'
-import axios from 'axios'
-import { Link } from 'react-router-dom'
-import './MoviesList.css'
-
-import CarouselMove from './Carousel'
+import React, { Component } from 'react';
+import axios from 'axios';
+import { Link } from 'react-router-dom';
+import './MoviesList.css';
+import { Card, CardGroup } from 'react-bootstrap';
+import CarouselMove from './Carousel';
 
 class MoviesList extends Component {
     state = {
@@ -51,9 +51,9 @@ class MoviesList extends Component {
         return <div id='moviesList' className='list-group list-group-horizontal'>
             {this.state.sortedMovies.map((movie) => (
                 <Link style={{ textDecoration: 'none' }} to={`/movies/${movie.id}`} key={movie.id}>
-                    <div
+                    {/* <div
                         className="card-group d-flex list-group-item list-group-item-action"
-                        style={{ maxHeight: '90vh' }}
+                        style={{ maxHeight: '100vw' }}
                     >
                         <div className="imageContainer mr-5 d-flex align-items-center">
                             <img
@@ -62,11 +62,20 @@ class MoviesList extends Component {
                                 alt={`${movie.title}`}
                             />
                         </div>
-                        <div className="d-flex flex-column justify-content-center m-2">
+                        <div className="d-flex flex-column justify-content-center">
                             <h2><strong>{movie.title}</strong></h2>
                             <p><strong>Rating: </strong>{movie.vote_average}</p>
                         </div>
-                    </div>
+                    </div> */}
+                 <CardGroup className='d-flex mt-10 mb-0 justify-content-center'>
+                        <Card.Img className='d-flex' style={{ width: '150px', height: 'auto' }} variant="top" src={`http://image.tmdb.org/t/p/w185/${movie.poster_path}`} alt={`${movie.title}`} />
+                        <Card.Body className='d-flex justify-content-center flex-column text-body'>
+                        <Card.Title>{movie.title}</Card.Title>
+                        <Card.Text className='d-flex justify-content-center flex-column'>
+                            <p><strong>Rating: </strong>{movie.vote_average}</p>
+                        </Card.Text>
+                        </Card.Body>
+                </CardGroup>
                 </Link>
             ))
             }

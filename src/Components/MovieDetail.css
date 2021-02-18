@@ -1,3 +1,7 @@
 #movieDetail {
     background-color: rgb(189, 186, 186);
   }
+
+#movieDetail img {
+  border: 2px solid black;
+} 

@@ -34,7 +34,7 @@ class MovieDetail extends React.Component {
         return (
             <div>
                 <NavBar />
-                <div id='movieDetail' className="d-flex flex-column justify-content-center align-items-center mt-4 mb-4">
+                <div id='movieDetail' className="d-flex flex-column justify-content-center align-items-center mt-4 ">
                     <div className="w-25 d-flex flex-column justify-content-center align-items-center mb-3">
                         <img style={{ width: '250px', height: "auto" }} src={`http://image.tmdb.org/t/p/w185/${this.state.poster_path}`} alt={`${this.state.title}`} />
                     </div>

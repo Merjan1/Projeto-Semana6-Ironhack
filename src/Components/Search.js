@@ -32,18 +32,18 @@ class Search extends Component {
   onKeyDown = async (event) => {
     try {
       if (event.key === "Enter") {
-      this.onClick(event);
+        this.onClick(event);
+      }
+    } catch (err) {
+      console.error(err);
     }
-  } catch (err) {
-    console.error(err);
-  }
   }
 
   render() {
     return (<div className='d-flex justify-content-center m-auto' >
       <Form inline>
         <FormControl onChange={this.handleSearch} onKeyDown={this.onKeyDown} value={this.state.input} type="text" placeholder="Search Movie" className="input" id='search-bar' />
-        <Button onClick={this.onClick} className='Button' variant="outline-success">Search</Button>
+        <Button onClick={this.onClick} className='Button' variant="success">Search</Button>
       </Form>
     </div>
     )

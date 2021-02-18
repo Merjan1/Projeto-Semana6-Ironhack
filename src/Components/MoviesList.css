@@ -2,6 +2,11 @@
     height: 50px;
 }
 
+<<<<<<< HEAD
 #moviesList img {
     height: 100px;
+}
+=======
+.moviesBg {
+    background-color: rgb(189, 186, 186);
 }

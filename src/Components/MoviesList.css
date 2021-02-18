@@ -1,3 +1,7 @@
 #moviesList {
     height: 50px;
 }
+
+#moviesList img {
+    height: 100px;
+}
